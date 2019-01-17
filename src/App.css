@@ -1,0 +1,21 @@
+.App-cfg {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  flex-direction: column;
+}
+
+.App-header {
+  flex: 1 1;
+  background-color: blue;
+}
+
+.App-main {
+  flex: 5 1;
+  background-color: beige;
+}
+
+.App-footer {
+  flex: 1 1;
+  background-color: yellow;
+}
