@@ -1,0 +1,20 @@
+{
+   "Einkaufen": [
+      {
+         "title": "Fressnapf",
+         "location": {
+            "lat": 51.662594, 
+            "lng": 7.743716
+            }
+      },
+      {
+         "title": "Futterhaus",
+         "location": {
+            "lat": 51.664747, 
+            "lng": 7.786913
+            }
+      }
+
+   ]
+}
+

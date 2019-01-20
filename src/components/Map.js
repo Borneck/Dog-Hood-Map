@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
+import { scriptLoader } from '../actions/index';
+import { craetedMarkers, markers, markerAnmiation } from '../actions/markers';
+
 
 import './Map.css';
 
+
 class Map extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: null,
+    };
+  }
 
   componentDidMount() {
     this.loadMap();
@@ -14,11 +26,27 @@ class Map extends Component {
   }
 
   initMap = () => {
+    const location = this.state.data;
     const map = new window.google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8
-    });
+      center: {lat: 51.6487226, lng: 7.7688058},
+      zoom: 12
+    });    
+
+    craetedMarkers({map});
+    
+    
+   
+  
   }
+
+  
+ 
+    
+        
+    
+
+ 
+  
 
   render() {
     return (
@@ -28,14 +56,6 @@ class Map extends Component {
   }
 }
 
-function scriptLoader(url) {
-  const index = window.document.getElementsByTagName('script')[0];
-  const script = window.document.createElement('script');
-  script.src = url;
-  script.async = true;
-  script.defer = true;
-  index.parentNode.insertBefore(script, index);
 
-}
 
 export default Map;
